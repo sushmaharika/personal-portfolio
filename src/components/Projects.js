@@ -49,8 +49,8 @@ const projectData = [
       title: "Personal Portfolio Website",
       desc: "This very portfolio! Built with React.js, Bootstrap, and React Router, featuring user signup/login, session management, light/dark theme toggle, and responsive design.", // Customize description
       img: "/assets/portfolio.png", // MAKE SURE TO CREATE THIS SCREENSHOT
-      demo: "#", // <-- REPLACE WITH YOUR LIVE DEPLOYMENT URL
-      repo: "https://github.com/your-username/your-portfolio-repo-name" // <-- REPLACE WITH YOUR REPO URL
+      demo: "https://personal-portfolio1-psi-lovat.vercel.app/portfolio", // <-- REPLACE WITH YOUR LIVE DEPLOYMENT URL
+      repo: "https://github.com/sushmaharika/personal-portfolio" // <-- REPLACE WITH YOUR REPO URL
     },
 ];
 
