@@ -1,0 +1,21 @@
+/* src/styles/Global.css */
+
+/* Add any truly global styles or minor Bootstrap overrides here */
+/* Remove all theme variables, body class styling, etc. */
+
+/* Example: Consistent font */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Let Bootstrap handle background/text color via data-bs-theme */
+}
+
+/* Example: Minor override if needed */
+/* .btn-primary {
+  font-weight: 600 !important;
+} */
+
+/* Ensure framer-motion container doesn't break layout if needed */
+/* Adjust if page transitions cause scrollbars */
+/* html, body {
+  overflow-x: hidden; /* Be cautious with this */
+/* } */

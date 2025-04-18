@@ -1,0 +1,158 @@
+/* src/styles/Portfolio.css */
+
+/* Keep styles specific to the Portfolio page layout and necessary Bootstrap overrides */
+/* Remove styles for individual components (cards, forms, buttons etc.) */
+
+.portfolio-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Background color will be handled by data-bs-theme */
+}
+
+.portfolio-header {
+  /* Navbar styling is handled by react-bootstrap */
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* Ensure above Bootstrap components */
+  border-bottom: 1px solid var(--bs-border-color); /* Use Bootstrap variable */
+}
+
+.portfolio-main {
+  flex-grow: 1;
+  padding-top: 3rem; /* Add padding below sticky header */
+  padding-bottom: 3rem;
+}
+
+/* Adjust section spacing if default Bootstrap margins aren't enough */
+.portfolio-section {
+  margin-bottom: 4rem; /* Example spacing between sections */
+  padding: 2rem; /* Add padding inside section cards */
+  border-radius: 0.75rem; /* Example card rounding */
+}
+
+.portfolio-footer {
+  font-size: 0.875rem;
+  padding: 1.5rem 0;
+  margin-top: auto; /* Push footer to bottom */
+  border-top: 1px solid var(--bs-border-color);
+  /* Background/text color handled by data-bs-theme */
+}
+
+
+/* --- Section Specific Overrides (Example) --- */
+
+/* Introduction Section Adjustments (if needed) */
+.introduction-section .display-4 { /* Target heading */
+  font-weight: 700;
+}
+.introduction-section .highlight {
+  color: var(--bs-primary); /* Use Bootstrap primary color */
+}
+.introduction-section .lead { /* Target subheading */
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.intro-links a {
+  margin: 0.5rem; /* Adjust spacing */
+}
+
+/* Skills Section Adjustments */
+.skills-section .progress {
+    height: 8px; /* Customize progress bar height */
+}
+.skills-section .progress-bar {
+    /* Customize progress bar appearance if needed */
+    background-color: var(--bs-primary);
+}
+.skill-item-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-item-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--bs-box-shadow);
+}
+
+
+/* Projects Section Adjustments */
+.projects-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure image zoom doesn't overflow */
+}
+.projects-section .card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--bs-box-shadow-lg); /* Use Bootstrap's larger shadow */
+}
+.projects-section .card-img-top {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.projects-section .card:hover .card-img-top {
+     transform: scale(1.05);
+}
+.project-links .btn {
+   margin-right: 0.5rem; /* Space between buttons */
+}
+.project-links .btn svg {
+    margin-right: 0.3rem;
+}
+
+
+/* Contact Section Adjustments */
+.contact-section .form-control:focus,
+.contact-section .form-select:focus {
+   border-color: var(--bs-primary);
+   box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25); /* Use Bootstrap focus */
+}
+.contact-section .btn-primary svg {
+    margin-left: 0.5rem;
+}
+
+/* Make section titles stand out more (Optional) */
+.section-title {
+  margin-bottom: 2.5rem; /* Space below title */
+  font-weight: 600;
+}
+.section-title::after { /* Optional underline */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--bs-primary);
+    border-radius: 2px;
+    margin: 0.75rem auto 0;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .portfolio-main {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .portfolio-section {
+       margin-bottom: 3rem;
+       padding: 1.5rem;
+    }
+    .section-title {
+      font-size: 1.75rem; /* Adjust title size */
+      margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjustments for very small screens if needed */
+    .portfolio-section {
+       padding: 1rem;
+    }
+     .section-title {
+      font-size: 1.5rem;
+    }
+    .project-links .btn {
+        /* Maybe stack buttons on small screens */
+        /* display: block;
+        width: 100%;
+        margin-bottom: 0.5rem; */
+    }
+}
